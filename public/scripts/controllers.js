@@ -17,6 +17,10 @@
 		};
 	});
 
+	myApp.controller('mainController', function($scope) {
+		$scope.message = 'Testing still';
+	});
+
 	myApp.controller('blogController', function($scope) {
 		$scope.message = 'Hello test';
 	});
