@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="myApp">
+
+<head>
+
+  <!-- Load stylesheets -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="css/layouts/main-style.css">
+
+  <!-- Load JS libraries -->
+  <script type="text/javascript" src="lib/angular.min.js"></script>
+  <script type="text/javascript" src="lib/angular-route.min.js"></script>
+  <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scippts/controllers.js"></script>
+</head>
+
+<body>
+  <div class="header" ng-controller="headerController">
+      <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+          <ul class="pure-menu-list">
+              <li class="pure-menu-item"><a ng-click="navHome()" class="pure-menu-link">Home</a></li>
+              <li class="pure-menu-item"><a ng-click="navBlog()" class="pure-menu-link">Blog</a></li>
+              <li class="pure-menu-item"><a ng-click="navProjects()" class="pure-menu-link">Projects</a></li>
+              <li class="pure-menu-item"><a ng-click="navPhotography()  " class="pure-menu-link">Photography</a></li>
+          </ul>
+      </div>
+  </div>
+
+  <!-- SPA Template swapped in here -->
+  <div ng-view id="content-wrapper">
+    <div class="content">
+    </div>
+  </div>
+  <div class="footer l-box is-center">
+    <div>
+      &copy; 2016 Justin Lee.
+    </div>
+      <div>
+        <a href="https://github.com/leejustin/portfolio">Source Code</a> | <a href="mailto:hello@leejustin.com">Contact Me</a> | <a href="https://linkedin.com/in/justinylee">LinkedIn</a>
+      </div>
+  </div>
+</body>
+
+</html>
